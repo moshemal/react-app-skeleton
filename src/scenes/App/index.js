@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import PageA from '../PageA';
 import PageB from '../PageB';
 import logo from './logo.svg';
 import './App.css';
 
-const DefaultScene = PageB;
+const DefaultPath = '/b';
 class App extends Component {
     render() {
         return (
@@ -20,7 +20,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/a" component={PageA}/>
                     <Route path="/b" component={PageB}/>
-                    <Route path="/" component={DefaultScene}/>
+                    <Redirect to={DefaultPath} />
                 </Switch>
             </div>
         );

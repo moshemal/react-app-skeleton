@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import PageA from '../PageA';
-import PageB from '../PageB';
+import Loadable from 'react-loadable';
+//import PageA from '../PageA';
+import Loading from '../../component/Loading';
+//import PageB from '../PageB';
 import logo from './logo.svg';
 import './App.css';
+
+const PageA = createLoadable('PageA');
+const PageB = createLoadable('PageB');
+
 
 const DefaultPath = '/b';
 class App extends Component {
@@ -25,6 +31,13 @@ class App extends Component {
             </div>
         );
     }
+}
+
+function createLoadable(name){
+    return Loadable({
+        loader: () => import(`../${name}`),
+        loading: Loading
+    });
 }
 
 export default App;

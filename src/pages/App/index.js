@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Loadable from 'react-loadable';
 //import PageA from '../PageA';
 import Loading from '../../components/Loading';
-//import PageB from '../PageB';
+//import PageB from 'app-scenes/PageB';
 import logo from './logo.svg';
 import './App.css';
 import SideBar from './components/Sidebar';
@@ -43,7 +43,7 @@ class App extends Component {
 
 function createLoadable(name) {
     return Loadable({
-        loader: () => import(`../${name}`),
+        loader: () => import(`app-scenes/${name}`),
         loading: Loading
     });
 }

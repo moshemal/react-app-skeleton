@@ -1,22 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Loadable from 'react-loadable';
-//import PageA from '../PageA';
-import Loading from '../../components/Loading';
-//import PageB from 'app-scenes/PageB';
+
 import logo from './logo.svg';
 import './App.css';
 import SideBar from './components/Sidebar';
 
-//const PageA = createLoadable('PageA');
-//const PageB = createLoadable('PageB');
+import scenes from 'app-scenes';
 
-var arr = [
-    { name: 'PageA', component: createLoadable('PageA') },
-    { name: 'PageB', component: createLoadable('PageB') }
-];
-
-const DefaultPath = '/b';
+const DefaultScene = scenes.find(s=>s.default) || scenes[0] || {};
 class App extends Component {
     render() {
         return (
@@ -31,9 +22,16 @@ class App extends Component {
                 <div className="App-scenes-container">
                     <SideBar />
                     <Switch>
-                        <Route path="/a" component={arr[0].component} />
-                        <Route path="/b" component={arr[1].component} />
-                        <Redirect to={DefaultPath} />
+                        {
+                            scenes.map(p => (
+                                <Route
+                                    path={p.path}
+                                    component={p.component}
+                                    key={p.name}
+                                ></Route>
+                            ))
+                        }
+                        <Redirect to={DefaultScene.path || ''} />
                     </Switch>
                 </div>
             </div>
@@ -41,11 +39,6 @@ class App extends Component {
     }
 }
 
-function createLoadable(name) {
-    return Loadable({
-        loader: () => import(`app-scenes/${name}`),
-        loading: Loading
-    });
-}
+
 
 export default App;

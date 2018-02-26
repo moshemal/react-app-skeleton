@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [ESLint](https://eslint.org/)
 - [React router](https://reacttraining.com/react-router/)
 - Code Splitting
+- [react-app-rewire](https://github.com/timarney/react-app-rewired)
 
 
 Below you will find some information on how to perform common tasks.<br>

@@ -16,5 +16,6 @@ module.exports = function override(config, env) {
 const alias = {
     'app-src':          `${paths.appSrc}`,
     'app-components':   `${paths.appSrc}/components`,
-    'app-scenes':       `${paths.appSrc}/scenes`
+    'app-scenes':       `${paths.appSrc}/scenes`,
+    'app-services':     `${paths.appSrc}/services`
 };

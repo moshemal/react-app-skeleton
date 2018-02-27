@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [React router](https://reacttraining.com/react-router/)
 - Code Splitting
 - [react-app-rewire](https://github.com/timarney/react-app-rewired)
+- [prop-types](https://www.npmjs.com/package/prop-types)
 
 
 Below you will find some information on how to perform common tasks.<br>

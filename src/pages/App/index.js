@@ -5,11 +5,12 @@ import logo from './logo.svg';
 import './App.css';
 import SideBar from './components/Sidebar';
 
-import scenes from 'app-scenes';
+import userService from 'app-services/user';
 
-const DefaultScene = scenes.find(s=>s.default) || scenes[0] || {};
 class App extends Component {
     render() {
+        const scenes = userService.getScenes();
+        const DefaultScene = scenes.find(s=>s.default) || scenes[0] || {};
         return (
             <div className="App">
                 <header className="App-header">
@@ -20,7 +21,7 @@ class App extends Component {
                     To get started, edit <code>src/App.js</code> and save to reload.
                 </p>
                 <div className="App-scenes-container">
-                    <SideBar scenes={scenes} />
+                    <SideBar scenes={userService.getScenes()} />
                     <Switch>
                         {
                             scenes.map(p => (

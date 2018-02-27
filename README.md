@@ -9,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Code Splitting
 - [react-app-rewire](https://github.com/timarney/react-app-rewired)
 - [prop-types](https://www.npmjs.com/package/prop-types)
+- [authentication workflow](https://reacttraining.com/react-router/web/example/auth-workflow)
+- show user authorized views only
 
 
 Below you will find some information on how to perform common tasks.<br>

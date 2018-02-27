@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
-import SideBar from './components/Sidebar';
+import SideBar from 'app-components/Sidebar';
 
 import userService from 'app-services/user';
 

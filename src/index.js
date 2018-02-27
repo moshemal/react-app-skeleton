@@ -6,7 +6,7 @@ import './index.css';
 import pages from './pages';
 import PrivateRoute from 'app-components/PrivateRoute';
 
-import Sidebar from './pages/App/components/Sidebar';
+import Sidebar from 'app-components/Sidebar';
 
 ReactDOM.render((
     <Router>

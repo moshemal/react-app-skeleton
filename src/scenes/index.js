@@ -2,9 +2,9 @@ import Loadable from 'react-loadable';
 import Loading from 'app-components/Loading';
 
 const scenes = [
-    { name: 'PageA', path: '/a', component: createLoadable('A') },
-    { name: 'PageB', path: '/b', component: createLoadable('B') },
-    { name: 'PageB', path: '/c', component: createLoadable('C') }
+    { name: 'A', path: '/a', component: createLoadable('A') },
+    { name: 'B', path: '/b', component: createLoadable('B') },
+    { name: 'C', path: '/c', component: createLoadable('C') }
 ];
 
 function createLoadable(name) {

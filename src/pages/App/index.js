@@ -35,6 +35,7 @@ class App extends Component {
                         <Redirect to={DefaultScene.path || ''} />
                     </Switch>
                 </div>
+                <button onClick={userService.logout}>Logout</button>
             </div>
         );
     }

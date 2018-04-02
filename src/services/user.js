@@ -30,9 +30,14 @@ function login(user, password){
     }
 }
 
+function logout(){
+    currentUser = undefined;
+    window.location.reload();
+}
 
 export default {
     getScenes,
     isLoggedIn,
-    login
+    login,
+    logout
 };
